@@ -1,0 +1,36 @@
+/* ETG theme: change the brand tokens below and nothing else.
+   Placeholder palette. Swap in official brand values from the brand guidelines. */
+:root {
+  --etg-accent: #1f4fd8;        /* TODO: brand accent */
+  --etg-accent-soft: #e8eefc;
+  --etg-ink: #14171f;
+  --etg-radius: 10px;
+}
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #ffffff;
+  --md-primary-bg-color: var(--etg-ink);
+  --md-accent-fg-color: var(--etg-accent);
+  --md-typeset-a-color: var(--etg-accent);
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: var(--etg-ink);
+}
+[data-md-color-scheme="slate"] {
+  --md-hue: 225;
+  --md-primary-fg-color: #12141a;
+  --md-primary-bg-color: #f2f3f7;
+  --md-accent-fg-color: #7d9bff;
+  --md-typeset-a-color: #7d9bff;
+}
+.md-header { box-shadow: none; border-bottom: 1px solid var(--md-default-fg-color--lightest); }
+.md-tabs { display: none; }
+.md-typeset h1 { font-weight: 650; letter-spacing: -0.02em; }
+.md-typeset h2 { font-weight: 600; letter-spacing: -0.01em; margin-top: 2em; }
+.md-typeset table:not([class]) { border-radius: var(--etg-radius); box-shadow: none;
+  border: 1px solid var(--md-default-fg-color--lightest); font-size: .8rem; }
+.md-typeset code { border-radius: 6px; }
+.md-typeset pre > code { border-radius: var(--etg-radius); }
+.md-typeset blockquote { border-left: 3px solid var(--etg-accent); color: var(--md-default-fg-color--light); }
+.md-nav__title { font-weight: 600; }
+.md-footer { display: none; }
+.status { display:inline-block; padding:.1em .6em; border-radius:99px; font-size:.7rem;
+  background: var(--etg-accent-soft); color: var(--etg-accent); font-weight:600; }
