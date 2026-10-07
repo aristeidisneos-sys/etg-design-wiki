@@ -1,8 +1,7 @@
 site_name: ETG Design × AI Wiki
 site_description: Agentic workflows for design with Figma and Claude
-# TODO: replace with https://<org>.github.io/<repo>/
-site_url: https://example.github.io/etg-design-wiki/
-# repo_url: https://github.com/<org>/<repo>
+site_url: https://aristeidisneos-sys.github.io/etg-design-wiki/
+repo_url: https://github.com/aristeidisneos-sys/etg-design-wiki
 
 theme:
   name: material
