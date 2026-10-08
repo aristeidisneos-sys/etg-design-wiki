@@ -9,7 +9,7 @@ Static wiki built with MkDocs Material, deployed to GitHub Pages by `.github/wor
 ## Rules
 - Content lives in `docs/*.md`. Add new pages to `nav:` in `mkdocs.yml`.
 - Theme tokens live only in `docs/stylesheets/etg.css` (`--etg-*`). Do not hardcode colors elsewhere.
-- Keep it minimal: no extra plugins, no custom JS, no images unless asked.
+- Keep it minimal: no extra plugins, no custom JS, no images unless asked. Markdown extensions `attr_list`/`md_in_html` are on only for the home page layout.
 - Page style: short, scannable, tables and copy-paste prompts, a "Level" line at the top.
 - Don't use official logos or brand assets unless the user provides them.
 
