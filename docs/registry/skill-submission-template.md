@@ -1,6 +1,6 @@
 # Skill submission template
 
-Copy this page into your submission (Drive `Skills/` folder) and fill it in. A skill moves from **Experimental** to **Team-approved** when every box is ticked or marked N/A with a reason. See [AI & skills governance](../08-governance.md) for the rules behind each item.
+Copy this page into your submission (Drive `Skills/` folder) and fill it in. A skill moves from **Experimental** to **Team-approved** when every box is ticked or marked N/A with a reason. See [AI & skills governance](../09-governance.md) for the rules behind each item.
 
 ---
 
@@ -11,7 +11,7 @@ Copy this page into your submission (Drive `Skills/` folder) and fill it in. A s
 | Name | `area-action` (e.g. `figma-tidy-page`) |
 | Description | One line |
 | Use when | Triggers: what situation should call this skill |
-| Safety level | 1, 2, 3 or 4 (see [safety rules](../08-governance.md#5-agent-safety-rules-for-figma)) |
+| Safety level | 1, 2, 3 or 4 (see [safety rules](../09-governance.md#5-agent-safety-rules-for-figma)) |
 | Owner / backup owner | Names |
 | Version | `0.1.0` |
 | Practice file | Link to the Figma file you tested on |

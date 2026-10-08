@@ -20,4 +20,4 @@ Edit the `--etg-*` tokens at the top of `docs/stylesheets/etg.css` with official
 
 ## With Claude Code
 Open this folder and run `claude`. `CLAUDE.md` gives it the rules and page outlines, e.g.
-*"Draft docs/01-prompting-and-context.md following CLAUDE.md."*
+*"Draft docs/02-prompting-and-context.md following CLAUDE.md."*

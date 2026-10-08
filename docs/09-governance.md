@@ -1,4 +1,4 @@
-# 08 · AI & skills governance
+# 09 · AI & skills governance
 
 > **Goal:** Make it easy for anyone on the team to contribute skills, while keeping quality high, the library tidy, and agents safe in shared Figma files.
 > **Level:** All · **Owners:** Design AI working group

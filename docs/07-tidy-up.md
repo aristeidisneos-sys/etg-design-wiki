@@ -1,4 +1,4 @@
-# 06 · Tidy Up: agent-assisted file upkeep in Figma
+# 07 · Tidy Up: agent-assisted file upkeep in Figma
 
 > **Goal:** Spend less time on file maintenance. Give the agent a reference (a template page or a convention) and let it do the repetitive alignment work, while you review the result.
 > **Level:** Beginner → Intermediate

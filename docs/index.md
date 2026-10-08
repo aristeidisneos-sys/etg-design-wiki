@@ -13,8 +13,9 @@ How we work with Figma, Figma Agents and Claude to design faster and keep files 
 ### Start
 
 - [Start here](00-start-here.md)
-- [Prompting & context](01-prompting-and-context.md)
-- [Design system hygiene](02-design-system-hygiene.md)
+- [How agents work](01-how-agents-work.md)
+- [Prompting & context](02-prompting-and-context.md)
+- [Design system hygiene](03-design-system-hygiene.md)
 
 </div>
 
@@ -22,9 +23,9 @@ How we work with Figma, Figma Agents and Claude to design faster and keep files 
 
 ### Build
 
-- [Brief to Figma](04-brief-to-figma.md)
-- [Components from a draft](05-components-from-draft.md)
-- [Code Connect](03-code-connect.md)
+- [Brief to Figma](05-brief-to-figma.md)
+- [Components from a draft](06-components-from-draft.md)
+- [Code Connect](04-code-connect.md)
 
 </div>
 
@@ -32,9 +33,10 @@ How we work with Figma, Figma Agents and Claude to design faster and keep files 
 
 ### Maintain
 
-- [Tidy up](06-tidy-up.md)
+- [Tidy up](07-tidy-up.md)
 - [Page registry](registry/page-registry.md)
-- [Pitfalls & verification](07-pitfalls-and-verification.md)
+- [Pitfalls & verification](08-pitfalls-and-verification.md)
+- [AI & skills governance](09-governance.md)
 
 </div>
 

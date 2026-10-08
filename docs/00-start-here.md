@@ -1,173 +1,325 @@
 # 00 · Start here
 
-> **Goal:** Get the mental model, pick the right tool, and get a first win in 15 minutes.
-> **Level:** Beginner · **Time:** 10 min read + 15 min exercise
+> **Goal:** Connect Claude to your Figma file and our team tools, then prove it works, without needing help.
+> **Level:** Beginner · **Time:** about 20 min
+> **Status:** <span class="status">Draft v0.1</span> Draft, validate with IT
+
+!!! note "Don't have Claude Desktop installed?"
+    [Download it here](https://claude.ai/download).
 
 ---
 
-## 1. The mental model
+## Where are you?
 
-An AI agent isn't a smarter autocomplete. It's a **new teammate who is fast, tireless, and starts every task knowing nothing about your team.**
+| Your situation | Go to |
+|---|---|
+| Nothing set up yet | [Step 1 · Claude Desktop](#step-1-claude-desktop) |
+| Claude is installed, no connectors yet | [Step 2 · Figma](#step-2-figma) |
+| Everything is connected | [Verify everything](#verify-everything) |
 
-Results depend on three things you control:
+## Connection checklist
 
-| Ingredient | Question it answers | Example |
+- [ ] 1 · Claude Desktop installed and signed in with your company account: **Required**
+- [ ] 2 · Figma: **Required**
+- [ ] 3 · Google Drive (wiki, skills, registry): **Required**
+- [ ] 4 · Atlassian: **Recommended**
+- [ ] 5 · Slack (read-only): **Recommended**
+- [ ] 6 · Gmail: **Optional**
+- [ ] 7 · Google Calendar: **Optional**
+- [ ] 8 · Team skills installed: **Recommended**
+- [ ] 9 · Verification passed: **Required**
+
+Copy this list into your notes and tick as you go (the boxes on this page are display only). If a connector needs admin approval, note it and move on.
+
+---
+
+## Before you start
+
+| You need | How to check |
+|---|---|
+| A company Claude account | You can sign in to Claude Desktop with your work email |
+| A Figma seat, with access to the team's design system library | You can open the library file in Figma |
+| Access to the wiki and `Skills/` folders in Google Drive | You can open both folders in Drive |
+| A practice file | A Figma file you can open and are happy to read from. Use a copy, never a shared production file |
+
+---
+
+## Step 1 · Claude Desktop
+
+**Why connect it:** Everything else connects through it.
+
+**What Claude can access:** Only what you type or attach in a conversation, until you connect tools in the next steps.
+
+**Steps**
+
+1. Install Claude Desktop using the download link at the top of this page.
+2. Open the app and choose to sign in. (verify on first run)
+3. Sign in with your **company** account, not a personal one. (verify on first run)
+
+**What you should see:** The chat window, signed in with your company account.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/claude-desktop/01-signed-in.png`: The Claude Desktop chat window after signing in, with the account name or email visible (blur anything private).
+
+**Verification prompt** (read-only)
+
+```
+Say hello and tell me which model you are. Do not use any tools.
+```
+
+Last verified: not yet
+
+---
+
+## Step 2 · Figma
+
+**Why connect it:** Lets Claude read your files, pages, components and variables.
+
+**What Claude can access:** Files and libraries your Figma account can open. Claude works as you, so it can never see more than you can.
+
+**Steps**
+
+1. In Claude Desktop, open the settings and find the connectors list. (verify on first run)
+2. Find **Figma** and select the option to connect it. (verify on first run)
+3. Sign in with your company Figma account and approve access when asked. (verify on first run)
+4. If asked which team or workspace to use, pick the one that holds our design system library. (verify on first run)
+
+**What you should see:** Figma shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/figma/01-connector-list.png`: The connectors list in Claude Desktop with Figma shown as connected.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/figma/02-authorise.png`: The Figma approval screen shown when connecting (before you approve).
+
+**Verification prompt** (read-only)
+
+```
+Using the Figma connector, read-only: open <paste your practice file link> and tell me the file name and list the names of its pages. Do not change anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 3 · Google Drive
+
+**Why connect it:** Home of the wiki, the team skills library (`Skills/` folder) and the page registry.
+
+**What Claude can access:** Files your Google account can open. Avoid asking Claude to edit, move or share files unless you mean to.
+
+**Steps**
+
+1. In the connectors list, find **Google Drive** and select the option to connect it. (verify on first run)
+2. Sign in with your company Google account. (verify on first run)
+3. Approve the access request. (verify on first run)
+
+**What you should see:** Google Drive shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/drive/01-connected.png`: The connectors list with Google Drive shown as connected.
+
+**Verification prompt** (read-only)
+
+```
+Using Google Drive, read-only: give me the titles of up to 3 recently modified files in <paste the wiki or Skills folder name>. Do not open, edit, move or share anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 4 · Atlassian (Jira)
+
+**Why connect it:** Figma agents already use it through our Jira connector, so tickets and designs stay linked.
+
+**What Claude can access:** Jira projects and issues your Atlassian account can see.
+
+**Steps**
+
+1. In the connectors list, find **Atlassian** and select the option to connect it. (verify on first run)
+2. Sign in with your company Atlassian account. (verify on first run)
+3. Approve access to the Jira site when asked. (verify on first run)
+
+**What you should see:** Atlassian shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/atlassian/01-connected.png`: The connectors list with Atlassian shown as connected.
+
+**Verification prompt** (read-only)
+
+```
+Using the Atlassian connector, read-only: tell me how many Jira issues are assigned to me. Do not list titles. Do not create or change anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 5 · Slack (read-only)
+
+**Why connect it:** Lets Claude find context from team discussions.
+
+**What Claude can access:** **Read-only.** IT Ops sets this: Claude can read what your account can see and cannot post, react or send. Do not ask it to.
+
+**Steps**
+
+1. In the connectors list, find **Slack** and select the option to connect it. (verify on first run)
+2. Sign in to the company workspace. (verify on first run)
+3. Approve the read-only access request. If it asks for more than reading, stop and check with IT Ops. (verify on first run)
+
+**What you should see:** Slack shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/slack/01-connected.png`: The connectors list with Slack shown as connected.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/slack/02-permissions.png`: The Slack permission screen, showing that access is read-only.
+
+**Verification prompt** (read-only)
+
+```
+Using Slack, read-only: tell me how many channels you can see. If the connector cannot tell, say so. Do not post, react or send anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 6 · Gmail
+
+**Why connect it:** Lets Claude find information in your email.
+
+**What Claude can access:** Your mailbox. Do not ask Claude to send, reply, forward or share anything unless you intend to.
+
+**Steps**
+
+1. In the connectors list, find **Gmail** and select the option to connect it. (verify on first run)
+2. Sign in with your company Google account. (verify on first run)
+3. Approve the access request. (verify on first run)
+
+**What you should see:** Gmail shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/gmail/01-connected.png`: The connectors list with Gmail shown as connected.
+
+**Verification prompt** (read-only)
+
+```
+Using Gmail, read-only: tell me how many unread messages are in my inbox. Do not quote any subjects, senders or content. Do not send, label or delete anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 7 · Google Calendar
+
+**Why connect it:** Lets Claude check your schedule when planning work.
+
+**What Claude can access:** Your calendar events. Do not ask Claude to create, change or share events unless you intend to.
+
+**Steps**
+
+1. In the connectors list, find **Google Calendar** and select the option to connect it. (verify on first run)
+2. Sign in with your company Google account. (verify on first run)
+3. Approve the access request. (verify on first run)
+
+**What you should see:** Google Calendar shown as connected in the connectors list.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/calendar/01-connected.png`: The connectors list with Google Calendar shown as connected.
+
+**Verification prompt** (read-only)
+
+```
+Using Google Calendar, read-only: tell me how many events I have today. Do not list titles or attendees. Do not create or change anything.
+```
+
+Last verified: not yet
+
+---
+
+## Step 8 · Team skills
+
+**Why connect it:** Skills are our shared, reviewed recipes for Figma work, so you start from what already works.
+
+**What Claude can access:** Skills are instructions Claude follows. They can only do what your connected tools allow, and each skill declares a safety level (see [09 · AI & skills governance](09-governance.md)).
+
+**Steps**
+
+1. Open the `Skills/` folder in Google Drive. It is the single source of truth for the skills library.
+2. Pick skills marked **Team-approved**. Do not use **Experimental** skills on shared production files.
+3. Install each skill using the install note in its own description. (verify on first run)
+4. Restart Claude Desktop if the skill does not appear. (verify on first run)
+
+**What you should see:** The installed skills listed in Claude Desktop. (verify on first run)
+
+!!! note "Screenshot needed"
+    `assets/screenshots/team-skills/01-skills-folder.png`: The Drive `Skills/` folder showing the Tier column.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/team-skills/02-installed.png`: Claude Desktop showing an installed skill.
+
+**Verification prompt** (read-only)
+
+```
+List the skills you can currently use. Show only the name and a one-line description for each. Do not run any of them.
+```
+
+Last verified: not yet
+
+---
+
+## Verify everything
+
+Run this once all the connectors you want are in place. It only reads and reports. It does not create, change, send or post anything.
+
+```
+Check each tool I have connected by doing ONE harmless read-only action, then report in a table with columns: Tool, What you did, Result (OK / Failed / Not connected).
+Rules: read only; do not create, edit, send, post or share anything; do not quote email subjects, senders, calendar titles or message content.
+- Figma: open <paste your practice file link>; give the file name and its page names.
+- Google Drive: give the titles of up to 3 recently modified files in <paste the wiki or Skills folder name>.
+- Atlassian: say how many Jira issues are assigned to me (a number only).
+- Slack (read-only): say how many channels you can see (a number only).
+- Gmail: say how many unread messages are in my inbox (a number only).
+- Google Calendar: say how many events I have today (a number only).
+- Skills: list the names of the skills you can use.
+Skip any tool I have not connected and mark it Not connected.
+```
+
+**What good looks like:** a table with one row per connected tool, each marked **OK**, with real names or numbers (not guesses). Tools you did not connect show **Not connected**. Any **Failed** row means that connector needs another look: see the table below.
+
+!!! note "Screenshot needed"
+    `assets/screenshots/verification/01-result.png`: the combined verification result table (blur any names you don't want shared).
+
+Last verified: not yet
+
+---
+
+## Troubleshooting
+
+| What you see | What it means | Fix |
 |---|---|---|
-| **Context** | What does "good" look like here? | Our design system, naming rules, a reference screen |
-| **Constraints** | What must it use, and what must it avoid? | Library components only, no hardcoded values, don't touch locked pages |
-| **Verification** | How do we know it worked? | Screenshot check, re-audit, side-by-side with the brief |
+| "Not authorised" or a permission error | Your account lacks access, or the approval expired | Disconnect and reconnect the connector with your company account. If it persists, check your access in the tool itself |
+| Can't see the design library | Your Figma seat or team access doesn't include the library, or the wrong team is selected | Ask the library owner for access, then reconnect and pick the right team. (verify on first run) |
+| Wrong workspace or account | You signed in with a personal or other organisation's account | Disconnect the connector, sign out of that account in your browser, then reconnect with your company account |
+| Connector appears but returns nothing | It is connected, but nothing matched, or your account can't see what you asked for | Retry with a specific file link or folder name. Check you can open the same thing in the tool directly |
+| Admin approval required | IT must allow the connector for your organisation | Note it in your checklist, request approval from IT, and carry on with the other connectors |
+| Connector disappears after a restart | The sign-in expired, or a policy removed it | Reconnect it. If it keeps happening, tell IT Ops |
 
-Weak output almost always traces back to one of these being missing. Before blaming the model, ask which one you left out.
-
-### Three habits that matter more than any prompt trick
-
-1. **Small steps.** Ask for one section, one component, or one audit. Review it, then continue.
-2. **Plan before action.** For anything non-trivial, ask: *"Tell me your plan first. Don't change anything yet."*
-3. **You review, always.** The agent is fast; you are accountable. Treat its output like a junior designer's first pass.
+<!-- TODO: add "Stuck?" contact box (Aris Neos, Fredrik Berg) with Slack links -->
 
 ---
 
-## 2. Which tool for which job?
+## Next steps
 
-| You want to… | Use | Why |
-|---|---|---|
-| Design or edit **inside Figma**, with the canvas in front of you | **Figma's built-in AI / agents** | Closest to the canvas; good for quick, visual iteration |
-| Let Claude **read from or write to a Figma file** (generate screens, audit, tidy up) | **Claude + Figma MCP** (Claude desktop / Cowork, or Claude Code) | Agent works on real files using your design system |
-| **Turn designs into code**, or work in a repo | **Claude Code** | Reads your codebase and Figma together; can run and test |
-| Write briefs, research, plan, draft docs, think out loud | **Claude chat** | Best for ideas and text before you touch a file |
-| Repeat the same job the same way every time | **Skills** (shared, reusable instructions) | Encodes team standards so everyone gets the same result |
-
-!!! note "Keep it simple at first"
-    Start with **one** tool and **one** workflow. Most people get more value from going deep on one than from trying everything.
-
-!!! warning "Verify against current docs"
-    Figma's AI features and the MCP server change quickly. Check Figma's and Anthropic's documentation for what's available on your plan before you rely on a feature.
+- [01 · How agents work](01-how-agents-work.md): the mental model and how to choose the right tool.
+- [02 · Prompting & context](02-prompting-and-context.md): how to write requests that get good results.
 
 ---
-
-## 3. One-time setup checklist
-
-- [ ] Claude access (desktop app, or Claude Code installed)
-- [ ] Figma connector / MCP server connected and authorised
-- [ ] Access to the team's Figma library (design system) in your account
-- [ ] A **practice file**: a duplicate you can't hurt
-- [ ] Read-only access first. Add edit access once you're comfortable.
-
-If you get stuck, ask in the team channel and **write down what fixed it**. That's the first entry for the wiki.
-
----
-
-## 4. Anatomy of a good request
-
-Use this shape for almost everything. Missing parts are the usual cause of poor results.
-
-```
-GOAL        What I want, in one sentence.
-CONTEXT     File/page link, audience, why it matters.
-USE         Library, components, tokens, or a reference page to follow.
-AVOID       What not to touch or invent.
-OUTPUT      What I want back (a plan, a screen, a report, a list).
-DONE WHEN   How we'll know it's right.
-```
-
-**Weak:**
-> Make a settings page.
-
-**Strong:**
-> **Goal:** Draft a "Notification settings" page for the web app.
-> **Context:** Logged-in user, desktop. Page link: `<link>`.
-> **Use:** Only components from our design system library. Follow the layout of the "Account settings" page.
-> **Avoid:** New components, hardcoded colours or spacing.
-> **Output:** First give me a short plan (sections and which components). Wait for my OK, then build.
-> **Done when:** Everything is bound to variables, layers are named, and you've shown a screenshot.
-
-More patterns live in [01 · Prompting & context](01-prompting-and-context.md).
-
----
-
-## 5. Your 15-minute first win
-
-Goal: see the full loop of **ask → plan → review → verify** on something harmless.
-
-**Setup:** Open your practice file (a duplicate). Connect Claude to it.
-
-### Step 1 · Read-only audit (5 min)
-Paste:
-```
-Look at <practice page link>. Don't change anything.
-List: (1) layers with default names like "Frame 123",
-(2) fills or text that aren't bound to variables or styles,
-(3) anything that looks like a detached component.
-Give me counts and a few examples of each.
-```
-**Check:** Are the counts plausible? Open two of the examples in Figma to confirm they're real.
-
-### Step 2 · Plan, then a small fix (5 min)
-Paste:
-```
-Propose renames for the 10 worst-named layers as a table (current → proposed).
-Follow the pattern "Role – detail" (e.g. "Header", "Price row").
-Wait for my approval.
-```
-Edit the table if you disagree, then reply: *"Apply these 10 renames only."*
-
-### Step 3 · Verify (5 min)
-Paste:
-```
-Take a screenshot of the page and confirm the 10 renames were applied.
-List anything you changed that I did not approve.
-```
-**Check:** The answer to the last line should be "nothing."
-
-### What you just practised
-Audit before changing, small scope, approval gate, verification. That's the loop behind every workflow in this wiki.
-
----
-
-## 6. Do's and don'ts
-
-| Do | Don't |
-|---|---|
-| Point to real pages and components as references | Describe your design system from memory |
-| Ask for a plan before big changes | Let it modify a whole file in one go |
-| Work on duplicates for anything risky | Experiment in production files |
-| Ask "what did you change that I didn't ask for?" | Assume silence means nothing extra changed |
-| Save prompts that worked | Re-invent them each time |
-| Share what you learn with the team | Keep tricks to yourself |
-
----
-
-## 7. Where to go next
-
-| If you want to… | Read |
-|---|---|
-| Write better requests | [01 · Prompting & context](01-prompting-and-context.md) |
-| Make your files "agent-readable" | [02 · Design system hygiene](02-design-system-hygiene.md) |
-| Create screens from a brief | [04 · Brief to Figma](04-brief-to-figma.md) |
-| Create components from a rough draft | [05 · Components from a draft](05-components-from-draft.md) |
-| Keep files clean with less effort | [06 · Tidy up](06-tidy-up.md) |
-| Avoid common mistakes | [07 · Pitfalls & verification](07-pitfalls-and-verification.md) |
-
----
-
-## 8. Glossary
-
-| Term | Meaning |
-|---|---|
-| **Agent** | An AI that takes multi-step actions (reads, plans, edits, checks), not just answers |
-| **MCP** | A standard way to connect an AI to tools such as Figma |
-| **Claude Code** | Claude in the terminal or IDE, working with files and code |
-| **Skill** | Saved, reusable instructions that make the agent follow a team standard |
-| **CLAUDE.md** | A project file Claude Code reads automatically for rules and context |
-| **Code Connect** | Figma's mapping between design components and code components |
-| **Variable / token** | A named design value (colour, spacing, radius) used instead of a raw number |
-| **Context** | Everything the agent knows for the current task |
-
----
-
-*Version 0.1 · Draft. Add your own lessons below.*
 
 ### Changelog
 | Date | Change | By |
 |---|---|---|
-| 2026-10-07 | Initial draft | |
+| 2026-10-08 | Initial draft | |

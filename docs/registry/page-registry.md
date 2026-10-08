@@ -1,6 +1,6 @@
 # Page registry
 
-The single source of truth the agent uses for [Tidy up](../06-tidy-up.md). Keep it current; one owner, monthly review.
+The single source of truth the agent uses for [Tidy up](../07-tidy-up.md). Keep it current; one owner, monthly review.
 
 | Template name | Figma link / node ID | Purpose | Use when | Notes |
 |---|---|---|---|---|
