@@ -96,6 +96,7 @@
 }
 .md-header__title { font-family: var(--etg-font-display); font-weight: 700; letter-spacing: -0.01em; }
 .md-tabs { display: none; }
+.md-header__source, .md-nav__source { display: none; }   /* repo link + stars/forks (repo_url stays for the edit button) */
 .md-search__form { background: var(--etg-canvas); border: 1px solid var(--etg-line); border-radius: var(--etg-radius-sm); }
 .md-search__input::placeholder { color: var(--etg-muted); }
 
