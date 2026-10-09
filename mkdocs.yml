@@ -54,6 +54,10 @@ nav:
   - Governance:
       - 09 · AI & skills governance: 09-governance.md
       - Skill submission template: registry/skill-submission-template.md
+  - Skills:
+      - Skills library: registry/skills-library.md
+      - DS-Reverse-Engineer: skills/ds-reverse-engineer.md
+      - "Worked example: Mantine": skills/ds-reverse-engineer-mantine-example.md
   - Reference:
       - 08 · Pitfalls & verification: 08-pitfalls-and-verification.md
       - Page registry: registry/page-registry.md

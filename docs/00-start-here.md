@@ -248,7 +248,7 @@ Last verified: not yet
 
 **Steps**
 
-1. Open the `Skills/` folder in Google Drive. It is the single source of truth for the skills library.
+1. Open the `Skills/` folder in Google Drive. It is the single source of truth for the skills library, and the [Skills library](registry/skills-library.md) page lists what is in it.
 2. Pick skills marked **Team-approved**. Do not use **Experimental** skills on shared production files.
 3. Install each skill using the install note in its own description. (verify on first run)
 4. Restart Claude Desktop if the skill does not appear. (verify on first run)

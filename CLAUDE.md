@@ -25,6 +25,7 @@ Static wiki built with MkDocs Material, deployed to GitHub Pages by `.github/wor
 ## Governance (09)
 - `docs/09-governance.md` is the policy: skill tiers (Experimental → Team-approved → Deprecated), review checklist, safety levels 1–4, incidents, data handling.
 - The skills library lives in Google Drive (`Skills/`). Don't copy policy text into other pages; link to 09.
+- `docs/registry/skills-library.md` mirrors the Drive `Skills/` folder. Every skill added to Drive gets a row (tier, safety level, owner/backup, last reviewed, last used) and starts as Experimental. Never invent owners, links or review dates: write TBD.
 - New skills are submitted with `docs/registry/skill-submission-template.md`.
 
 ## Page outlines (for stubs marked Planned)
